@@ -1,0 +1,24 @@
+{
+  "system": "0123456789abcdef0123",
+  "publicKeys": ["REPLACE_WITH_YOUR_BASE64URL_ED25519_PUBLIC_KEY"],
+  "maxProofAgeSeconds": 60,
+  "futureClockSkewSeconds": 5,
+  "files": {
+    "app-package": {
+      "key": "releases/app-1.0.0.zip",
+      "downloadName": "app-1.0.0.zip",
+      "allowOutdated": false
+    },
+    "app-update": {
+      "key": "releases/app-1.0.1.zip",
+      "downloadName": "app-1.0.1.zip",
+      "allowOutdated": true
+    },
+    "premium-content": {
+      "key": "premium/content.zip",
+      "downloadName": "content.zip",
+      "allowOutdated": false,
+      "requiredVariable": { "name": "download_tier", "equals": "premium" }
+    }
+  }
+}
